@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// AR/VR Custom Colors
+				'neon-cyan': 'hsl(var(--neon-cyan))',
+				'neon-purple': 'hsl(var(--neon-purple))',
+				'space-blue': 'hsl(var(--space-blue))',
+				'panel-bg': 'hsl(var(--panel-bg))',
+				'glass-bg': 'hsl(var(--glass-bg))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +90,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(193 100% 50% / 0.3)' },
+					'50%': { boxShadow: '0 0 30px hsl(193 100% 50% / 0.6)' }
+				},
+				'pulse-neon': {
+					'0%, 100%': { borderColor: 'hsl(193 100% 50% / 0.3)' },
+					'50%': { borderColor: 'hsl(193 100% 50% / 0.8)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-neon': 'pulse-neon 2s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'gradient-spatial': 'var(--gradient-spatial)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-panel': 'var(--gradient-panel)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'panel': 'var(--shadow-panel)',
+				'floating': 'var(--shadow-floating)'
 			}
 		}
 	},
